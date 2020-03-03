@@ -22,7 +22,25 @@ body{
     align-content: center;
     > div {
         border: solid 1px black;
+        width:200px;
+        height:200px;
+        position: relative;
+        text-align: left;
+        // font-size: 0.8rem;
+    //  padding: 15px;
+
+
+        >div {
+            position: absolute;
+            top: 0; left: 0;
+            text-align: center;
+        }
     }
+}
+
+span {
+    // font-size: 0.8rem;
+    font-weight: 700;
 }
 
 .trans{
@@ -42,7 +60,7 @@ body{
     transition: all ease-in-out .5s .1s;
     transform-origin: bottom left;
     &.active {
-        transform: rotate(20deg);
+        transform: rotate(50deg);
     }
 }
 .trans-two{
@@ -76,7 +94,7 @@ body{
     transition: all ease-in-out .5s .1s;
     transform-origin: left top;
     &.active {
-        transform: rotate(-30deg);
+        transform: rotate(-100deg);
     }
     
 }

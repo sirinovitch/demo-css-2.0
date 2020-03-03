@@ -1,0 +1,123 @@
+html{
+    width:100%;
+    height: 100%;
+}
+body{
+    width: 100%;
+    height:100%;
+    display: flex;
+    flex-direction: column;
+   
+    
+
+}
+.transform{
+    margin:150px;
+    display: flex;
+    // align-items: center;
+    justify-content: space-around;
+    // background-color: red;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    align-content: center;
+    > div {
+        border: solid 1px black;
+    }
+}
+
+.trans{
+    align-self: center;
+    background-color: pink;
+    width:200px;
+    height:200px;
+    transform:rotate(0deg); //transform est la propriété, rotate sa valeur
+    transform-origin:center; //propriété à utiliser avec transform sans quoi elle ne fonctionne pas -> modifie la position du point d'ancrage de la transformation - par défaut = center / 50% 50% 
+    //transform-origin: x(left) y (center)
+}
+.trans-one{
+    align-self: center;
+    background-color: rgb(192, 204, 255);
+    width:200px;
+    height:200px;
+    transition: all ease-in-out .5s .1s;
+    transform-origin: bottom left;
+    &.active {
+        transform: rotate(20deg);
+    }
+}
+.trans-two{
+    align-self: center;
+    background-color: rgb(192, 255, 229);
+    width:200px;
+    height:200px;
+    transition: all ease-in-out .5s .1s;
+    transform-origin: center bottom;
+    &.active {
+        transform: rotate(90deg);
+    }
+
+}
+.trans-three{
+    align-self: center;
+    background-color: rgb(243, 255, 192);
+    width:200px;
+    height:200px;
+    transition: all ease-in-out .5s .1s;
+    transform-origin: right bottom;
+    &.active {
+        transform: rotate(240deg);
+    }
+}
+.trans-four{
+    align-self: center;
+    background-color: rgb(137, 216, 252);
+    width:200px;
+    height:200px;
+    transition: all ease-in-out .5s .1s;
+    transform-origin: left top;
+    &.active {
+        transform: rotate(-30deg);
+    }
+    
+}
+
+
+
+// object-fit
+.object-fit{
+    justify-content: center;
+    margin-top:150px;
+    display: flex;
+    justify-content: space-around;
+}
+.brit{
+    width:200px;
+    // object-fit: cover;
+    object-fit: cover;
+    height:200px;
+    object-position: right;
+    border:1px solid black;
+
+}
+
+.brit-brit{
+    width:200px;
+    object-fit: scale-down;
+    // object-position: right;
+    height:200px;
+    border:1px solid black;
+}
+
+.britty-brit{
+    border: 1px solid black;
+    width:500px;
+    object-fit: contain;
+    height:100px;
+}
+
+.crazy-brit{
+    border: 1px solid black;
+    width: 100px;;
+    object-fit: fill;
+    height:300px;
+}
